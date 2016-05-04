@@ -140,13 +140,13 @@ suite = {
       "dependencies" : [
         "JUNIT",
       ],
-      "javaCompliance" : "1.8",
+      "javaCompliance" : "1.7",
     },
 
     "com.oracle.mxtool.compilerserver" : {
       "subDir" : "java",
       "sourceDirs" : ["src"],
-      "javaCompliance" : "1.7+", # jdk7 or later
+      "javaCompliance" : "1.7+",
     },
 
     "com.oracle.mxtool.checkcopy" : {

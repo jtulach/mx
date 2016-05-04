@@ -110,7 +110,7 @@ public class TextRunListener implements MxRunListener {
     public void testFinishedDelimiter() {
     }
 
-    public static RunListener createRunListener(MxRunListener l) {
+    public static RunListener createRunListener(final MxRunListener l) {
         return new TextListener(l.getWriter()) {
             private Class<?> lastClass;
             private boolean failed;
