@@ -11163,6 +11163,11 @@ def _netbeansinit_project(p, jdks=None, files=None, libFiles=None, dists=None):
         genSrcDir = genSrcDir.replace('\\', '\\\\')
         annotationProcessorSrcFolder = "src.ap-source-output.dir=" + genSrcDir
 
+    if not exists(p.output_dir()):
+        os.makedirs(p.output_dir())
+    open(os.path.join(p.output_dir(), '.netbeans_automatic_build'), 'w').close()
+    open(os.path.join(p.output_dir(), '.netbeans_update_resources'), 'w').close()
+
     content = """
 annotation.processing.enabled=""" + annotationProcessorEnabled + """
 annotation.processing.enabled.in.editor=""" + annotationProcessorEnabled + """
